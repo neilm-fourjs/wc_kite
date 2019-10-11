@@ -1,0 +1,38 @@
+<StyleList>
+
+  <Style name="ToolBar">
+    <StyleAttribute name="lookAndFeel"              value="QTCurve" />
+    <StyleAttribute name="backgroundColor"          value="#95daf7" />
+    <!-- StyleAttribute name="backgroundGradientType"   value="linear|top|bottom" /-->
+    <!-- StyleAttribute name="backgroundGradientColor"  value="#D0FAFA" /-->
+    <StyleAttribute name="lookAndFeel"              value="Motif" />
+  </Style>
+
+  <Style name="Window">
+    <StyleAttribute name="lookAndFeel"              value="QTCurve" />
+    <StyleAttribute name="backgroundColor"          value="#95daf7" />
+    <StyleAttribute name="actionPanelPosition"     value="none" />
+    <StyleAttribute name="ringMenuPosition"        value="none" />
+  </Style>
+
+  <Style name="Label">
+     <StyleAttribute name="fontWeight"              value="bold" />
+  </Style>
+  <Style name=".plain">
+     <StyleAttribute name="textFormat"              value="plain" />
+  </Style>
+  <Style name=".html">
+     <StyleAttribute name="textFormat"              value="html" />
+  </Style>
+
+  <Style name="Window.dialog">
+     <StyleAttribute name="windowType"              value="modal" />
+     <StyleAttribute name="sizable"                 value="no" />
+     <StyleAttribute name="position"                value="center" />
+     <StyleAttribute name="actionPanelPosition"     value="bottom" />
+     <StyleAttribute name="ringMenuPosition"        value="bottom" />
+     <StyleAttribute name="toolBarPosition"         value="none" />
+     <StyleAttribute name="statusBarType"           value="none" />
+    <StyleAttribute name="backgroundColor"          value="#ffffff" />
+  </Style>
+</StyleList>

@@ -1,0 +1,104 @@
+# Copyright 2010-2010 Four J's Development Tools. All Rights Reserved.
+# $Id:$
+
+ACTION DEFAULTS
+	ACTION newKite (TEXT="New", IMAGE="fa-file-o")
+	ACTION openKite (TEXT="Open", IMAGE="fa-folder-open-o")
+	ACTION saveKite (TEXT="Save", IMAGE="fa-save")
+	ACTION exit (TEXT="Exit", IMAGE="fa-power-off")
+	ACTION about (TEXT="About", IMAGE="fa-question")
+	ACTION kiteupdated (DEFAULTVIEW=NO)
+END
+
+TOOLBAR
+	ITEM exit
+	ITEM newKite
+	ITEM openKite
+	ITEM saveKite
+	ITEM about
+END -- TOOLBAR
+
+LAYOUT (TEXT="Interactive Web Component - Kite Demo", STYLE="main2 kite")
+HBOX (SPLITTER)
+VBOX (SPLITTER)
+GRID
+{
+[lab1][kites              ][lab3                       ]
+[lab2][sc                 ][info                       ]
+[wc_data                                               ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+}
+END -- GRID
+
+END -- VBOX
+VBOX
+TABLE
+{
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+[p         |c                    ]
+}
+END -- TABLE
+GRID
+{
+Colour:[colour       ]
+Panel: [panel        ]
+}
+END -- GRID
+END -- VBOX
+
+END -- HBOX
+END -- LAYOUT
+
+ATTRIBUTES 
+LABEL lab1 : lab1, TEXT="Kite:";
+LABEL lab2 : lab2, TEXT="Schema Name:";
+LABEL lab3 : lab3, TEXT="Kite by:";
+
+COMBOBOX kites = FORMONLY.kitename, INITIALIZER=cb_kites, NOT NULL;
+EDIT sc = FORMONLY.colourSchemaName;
+LABEL info = FORMONLY.info, STYLE="html";
+
+WEBCOMPONENT wc_data = FORMONLY.wc_data, 
+	STRETCH=BOTH, SCROLLBARS=NONE,
+	COMPONENTTYPE="kite",
+	PROPERTIES=(model="Talent_std"); 
+
+colour = FORMONLY.colour, NOENTRY;
+panel = FORMONLY.panel, NOENTRY;
+
+p = FORMONLY.p, TITLE="Panel";
+c = FORMONLY.c, TITLE="Colour";
+
+INSTRUCTIONS
+SCREEN RECORD arr ( p, c )
