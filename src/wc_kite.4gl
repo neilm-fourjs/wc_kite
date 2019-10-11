@@ -34,8 +34,8 @@ MAIN
   CALL g2_lib.g2_init(ARG_VAL(1), "wc_kite")
 
 -- Try and find the kite folder
-	IF os.path.isDirectory("../webcomponents/kite") THEN
-		LET m_kitePath = "../webcomponents/kite"
+	IF os.path.isDirectory("../pics/webcomponents/kite") THEN
+		LET m_kitePath = "../pics/webcomponents/kite"
 	END IF
 	IF os.path.isDirectory("../wc_kite/webcomponents/kite") THEN
 		LET m_kitePath = "../wc_kite/webcomponents/kite"
